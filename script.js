@@ -3,6 +3,7 @@ let tools = document.querySelector(".tools");
 let map = [];
 let minelocate = [];
 let gameover = false;
+console.log("supersapper made by TitanExpert");
 
 function GenArea(map, maxx, maxy, propmine) {
   winner = false;
