@@ -99,6 +99,7 @@ body {
   background-color: rgb(246, 246, 246);
   margin: 0px;
   box-sizing: border-box;
+  overflow-y: hidden;
 }
 .tools button {
   width: 60px;
