@@ -17,6 +17,7 @@ function GenArea(map, maxx, maxy, propmine) {
     game.style.width = `${maxx * 61 + 214}px`;
   }
   game.style.height = `${maxy * 61 + 110}px`;
+  document.body.style.height = `${maxy * 61 + 110}px`;
   tools.style.top = `${maxy * 61 + 10}px`;
   let random;
   let gencount = 0
