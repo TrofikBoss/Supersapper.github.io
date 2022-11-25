@@ -10,7 +10,11 @@ function GenArea(map, maxx, maxy, propmine) {
   for (y in map) {
     map[y] = "";
   }
-  game.style.width = `${maxx * 61 + 214}px`;
+  if (document.body.clientWidth < 550) {
+    game.style.width = `${maxx * 61}px`;
+  } else {
+    game.style.width = `${maxx * 61 + 214}px`;
+  }
   game.style.height = `${maxy * 61 + 110}px`;
   tools.style.top = `${maxy * 61 + 10}px`;
   let random;
