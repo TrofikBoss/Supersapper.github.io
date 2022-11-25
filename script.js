@@ -47,7 +47,11 @@ function DrawArea(map) {
       area.classList.add("area");
       area.classList.add(`coord-x-${x}`);
       area.classList.add(`coord-y-${y}`);
-      area.style.left = `${x * 61 + 100}px`;
+      if (document.body.clientWidth < 550) {
+        area.style.left = `${x * 61}px`;
+      } else {
+        area.style.left = `${x * 61 + 100}px`;
+      }
       area.style.top = `${y * 61}px`
       if (map[y][x] == "m") {
         area.classList.add("area-mine");
