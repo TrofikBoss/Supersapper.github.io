@@ -3,7 +3,6 @@ let tools = document.querySelector(".tools");
 let map = [];
 let minelocate = [];
 let gameover = false;
-console.log("supersapper made by TitanExpert");
 
 function GenArea(map, maxx, maxy, propmine) {
   winner = false;
@@ -11,13 +10,8 @@ function GenArea(map, maxx, maxy, propmine) {
   for (y in map) {
     map[y] = "";
   }
-  if (document.body.clientWidth < 550) {
-    game.style.width = `${maxx * (document.body.clientWidth / maxx)}px`;
-    game.style.height = `${maxy * (document.body.clientWidth / maxy) + 110}px`;
-  } else {
-    game.style.width = `${maxx * 61 + 214}px`;
-    game.style.height = `${maxy * 61 + 110}px`;
-  }
+  game.style.width = `${maxx * 61 + 214}px`;
+  game.style.height = `${maxy * 61 + 110}px`;
   tools.style.top = `${maxy * 61 + 10}px`;
   let random;
   let gencount = 0
@@ -49,13 +43,8 @@ function DrawArea(map) {
       area.classList.add("area");
       area.classList.add(`coord-x-${x}`);
       area.classList.add(`coord-y-${y}`);
-      if (document.body.clientWidth < 550) {
-        area.style.left = `${x * 61 + 5}px`;
-        area.style.top = `${y * 61}px`;
-      } else {
-        area.style.left = `${x * 61 + 100}px`;
-        area.style.top = `${y * 61}px`;
-      }
+      area.style.left = `${x * 61 + 100}px`;
+      area.style.top = `${y * 61}px`
       if (map[y][x] == "m") {
         area.classList.add("area-mine");
         area.classList.add("area-close");
