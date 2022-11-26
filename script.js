@@ -1,5 +1,6 @@
 let game = document.querySelector("#game");
 let tools = document.querySelector(".tools");
+let instruction = document.querySelector(".instruction");
 let map = [];
 let minelocate = [];
 let gameover = false;
@@ -101,6 +102,9 @@ let menuacts = null;
 
 function menuAction(act, butx) {
   if (butx.classList.contains("active") == false) {
+    document.querySelectorAll(".tools button").forEach(function(but) {
+      but.classList.remove("active");
+    })
     butx.classList.add("active");
     menuacts = act;
   } else {
@@ -118,6 +122,11 @@ function menuAction(act, butx) {
     audio.play();
     AreaChecker();
     setTimeout(() => {butx.classList.remove("active")}, 1000);
+  }
+  if (menuacts == "info") {
+    document.querySelector(".instruction").classList.remove("hidden");
+  } else {
+    document.querySelector(".instruction").classList.add("hidden");
   }
 }
 function AreaChecker() { // запускает проверку на клики, когда перезапускаешь карту, клетки создаются заново и нужна новая проверка
@@ -170,6 +179,5 @@ function tick() {
 GenArea(map, 10, 10, 20);
 setInterval(tick, 100);
 AreaChecker();
-
 
 
