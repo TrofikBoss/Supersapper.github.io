@@ -12,7 +12,7 @@ function GenArea(map, maxx, maxy, propmine) {
     map[y] = "";
   }
   if (document.body.clientWidth < 550) {
-    game.style.width = `${maxx * 61}px`;
+    game.style.width = `${maxx * (document.body.clientWidth / maxx)}px`;
   } else {
     game.style.width = `${maxx * 61 + 214}px`;
   }
@@ -49,7 +49,7 @@ function DrawArea(map) {
       area.classList.add(`coord-x-${x}`);
       area.classList.add(`coord-y-${y}`);
       if (document.body.clientWidth < 550) {
-        area.style.left = `${x * 61}px`;
+        area.style.left = `${x * (document.body.clientWidth / map[y].length)}px`;
       } else {
         area.style.left = `${x * 61 + 100}px`;
       }
