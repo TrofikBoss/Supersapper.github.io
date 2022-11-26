@@ -100,7 +100,7 @@ body {
   margin: 0px;
   box-sizing: border-box;
   overflow-y: hidden;
-  height: 800px;
+  height: 100%;
 }
 .tools button {
   width: 60px;
