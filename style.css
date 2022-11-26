@@ -3,6 +3,7 @@
   height: 55px;
   background-color: rgb(255, 249, 244);
   border: 5px solid rgb(255, 234, 216);
+  background-size: 100%;
   position: absolute;
   z-index: 1;
   user-select: none;
