@@ -99,8 +99,10 @@ body {
   background-color: rgb(246, 246, 246);
   margin: 0px;
   box-sizing: border-box;
-  overflow-y: hidden;
   height: 100%;
+}
+* {
+  transition: 0.1s;
 }
 .tools button {
   width: 60px;
