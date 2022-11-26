@@ -51,6 +51,7 @@ function DrawArea(map) {
         area.style.left = `${x * 61 + 100}px`;
       } else {
         area.style.left = `${x * 61}px`;
+        game.style.transform = `scale(${document.body.clientWidth / game.style.width.replace("px", "")}) translateX(${(game.style.width.replace("px", "") - game.style.width.replace("px", "") * (game.style.width.replace("px", "") / document.body.clientWidth)) / 2}px) translateY(${(game.style.height.replace("px", "") - game.style.height.replace("px", "") * (game.style.width.replace("px", "") / document.body.clientWidth)) / 2}px)`;
       }
       area.style.top = `${y * 61}px`
       if (map[y][x] == "m") {
