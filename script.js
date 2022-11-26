@@ -50,6 +50,8 @@ function DrawArea(map) {
       area.classList.add(`coord-y-${y}`);
       if (document.body.clientWidth < 550) {
         area.style.left = `${x * (document.body.clientWidth / map[y].length)}px`;
+        area.style.width = `${document.body.clientWidth / map[y].length}px`;
+        area.style.height = `${document.body.clientWidth / map[y].length}px`;
       } else {
         area.style.left = `${x * 61 + 100}px`;
       }
