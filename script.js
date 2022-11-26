@@ -50,13 +50,13 @@ function DrawArea(map) {
       area.classList.add(`coord-x-${x}`);
       area.classList.add(`coord-y-${y}`);
       if (document.body.clientWidth < 550) {
-        area.style.left = `${x * (document.body.clientWidth / map[y].length)}px`;
+        area.style.left = `${x * (document.body.clientWidth / map[y].length) + 5}px`;
+        area.style.top = `${y * (document.body.clientWidth / map[y].length) + 5}px`
         area.style.width = `${document.body.clientWidth / map[y].length}px`;
         area.style.height = `${document.body.clientWidth / map[y].length}px`;
       } else {
         area.style.left = `${x * 61 + 100}px`;
       }
-      area.style.top = `${y * 61}px`
       if (map[y][x] == "m") {
         area.classList.add("area-mine");
         area.classList.add("area-close");
