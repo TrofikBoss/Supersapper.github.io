@@ -147,6 +147,7 @@ function wingames() {
 let closecount = 0;
 let wingame = false;
 function tick() {
+  document.documentElement.scrollTop = 0;
   document.addEventListener('click', function() {
     if(Math.round(audio.currentTime) == 0) {
       audio.play();
@@ -163,7 +164,6 @@ function tick() {
     wingames();
   }
   closecount = 0;
-  document.documentElement.scrollTop = 0;
 }
 
 GenArea(map, 10, 10, 20);
