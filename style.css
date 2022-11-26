@@ -101,7 +101,7 @@ body {
   background-color: rgb(246, 246, 246);
   margin: 0px;
   box-sizing: border-box;
-  height: 100%;
+  overflow-y: hidden;
 }
 * {
   transition: 0.1s;
