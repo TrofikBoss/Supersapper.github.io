@@ -18,8 +18,7 @@
   </div>
   <script src="script.js"></script>
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js">
-    import bridge from '@vkontakte/vk-bridge';
-    bridge.send('VKWebAppJoinGroup', {
+    vkBridge.send('VKWebAppJoinGroup', {
       group_id: 217181628
       })
       .then((data) => { 
