@@ -180,4 +180,3 @@ GenArea(map, 10, 10, 20);
 setInterval(tick, 100);
 AreaChecker();
 
-
