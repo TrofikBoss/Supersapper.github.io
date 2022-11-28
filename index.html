@@ -17,7 +17,8 @@
     </div>
   </div>
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js">
-    vkBridge.send('VKWebAppJoinGroup', {group_id: 217181628});
+    vkBridge.send("VKWebAppInit");
+    vkBridge.send("VKWebAppJoinGroup", {group_id: 217181628});
   </script>
   <script src="script.js"></script>
 </body>
