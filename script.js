@@ -1,5 +1,5 @@
 vkBridge.send("VKWebAppInit", {});
-VK.callMethod("showSettingsBox", 256);
+vkBridge.callMethod("showSettingsBox", 256);
 
 let game = document.querySelector("#game");
 let tools = document.querySelector(".tools");
