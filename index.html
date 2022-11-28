@@ -16,20 +16,9 @@
       <button id="tools__info" onclick='menuAction("info", this)'></button>
     </div>
   </div>
-  <script src="script.js"></script>
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js">
-    vkBridge.send('VKWebAppJoinGroup', {
-      group_id: 217181628
-      })
-      .then((data) => { 
-        if (data.result) {
-          // Пользователь подписался на сообщество
-        }
-      })
-      .catch((error) => {
-        // Ошибка
-        console.log(error);
-      });
+    vkBridge.send('VKWebAppJoinGroup', {group_id: 217181628});
   </script>
+  <script src="script.js"></script>
 </body>
 </html>
