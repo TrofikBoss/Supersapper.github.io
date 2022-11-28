@@ -16,11 +16,21 @@
       <button id="tools__info" onclick='menuAction("info", this)'></button>
     </div>
   </div>
+  <script src="script.js"></script>
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js">
     import bridge from '@vkontakte/vk-bridge';
-    bridge.send("VKWebAppInit", {});
-    bridge.send("showSettingsBox", 256);
+    bridge.send('VKWebAppJoinGroup', {
+      group_id: 217181628
+      })
+      .then((data) => { 
+        if (data.result) {
+          // Пользователь подписался на сообщество
+        }
+      })
+      .catch((error) => {
+        // Ошибка
+        console.log(error);
+      });
   </script>
-  <script src="script.js"></script>
 </body>
 </html>
