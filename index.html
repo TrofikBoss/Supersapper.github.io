@@ -16,7 +16,10 @@
       <button id="tools__info" onclick='menuAction("info", this)'></button>
     </div>
   </div>
-  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js">
+    vkBridge.send("VKWebAppInit", {});
+    vkBridge.callMethod("showSettingsBox", 256);
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
