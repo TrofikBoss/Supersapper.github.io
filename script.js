@@ -123,6 +123,9 @@ function menuAction(act, butx) {
     AreaChecker();
     setTimeout(() => {butx.classList.remove("active")}, 1000);
   }
+  if (menuacts == "vk") {
+    vkBridge.send("VKWebAppJoinGroup", {group_id: 217181628});
+  }
   if (menuacts == "info") {
     document.querySelector(".instruction").classList.remove("hidden");
   } else {
