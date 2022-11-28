@@ -17,8 +17,9 @@
     </div>
   </div>
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js">
-    vkBridge.send("VKWebAppInit", {});
-    vkBridge.callMethod("showSettingsBox", 256);
+    import bridge from '@vkontakte/vk-bridge';
+    bridge.send("VKWebAppInit", {});
+    bridge.send("showSettingsBox", 256);
   </script>
   <script src="script.js"></script>
 </body>
