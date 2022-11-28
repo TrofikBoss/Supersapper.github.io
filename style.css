@@ -130,6 +130,12 @@ body {
   image-rendering: pixelated;
   margin-left: 50px;
 }
+#tools__vk {
+  background-image: url(texture/VK.png);
+  background-size: 100%;
+  image-rendering: pixelated;
+  margin-left: 50px;
+}
 .area.flag {
   background-image: url(texture/flag.png);
   background-size: 100%;
