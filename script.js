@@ -124,13 +124,23 @@ function menuAction(act, butx) {
     setTimeout(() => {butx.classList.remove("active")}, 1000);
   }
   if (menuacts == "vk") {
-    vkBridge.send("VKWebAppLeaveGroup", {group_id: 217181628})
     vkBridge.send("VKWebAppJoinGroup", {group_id: 217181628})
+    if (data.result) {
+        butx.classList.remove("active");
+      }
+    })
+    .catch((error) => {
+      // Ошибка
+      butx.classList.remove("active");
+    });
   }
   if (menuacts == "info") {
     document.querySelector(".instruction").classList.remove("hidden");
   } else {
     document.querySelector(".instruction").classList.add("hidden");
+  }
+  if (menuacts == "add") {
+    vkBridge.send('VKWebAppShare', {link: 'https://vk.com/app51487141'})
   }
 }
 function AreaChecker() { // запускает проверку на клики, когда перезапускаешь карту, клетки создаются заново и нужна новая проверка
