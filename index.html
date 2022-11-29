@@ -21,6 +21,20 @@
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
   <script>
     vkBridge.send("VKWebAppInit");
+    vkBridge.send('VKWebAppGetGroupInfo', {
+      group_id: 217181628
+      })
+      .then((data) => { 
+        if (data.id) {
+          if (data.is_member == 1) {
+            document.querySelector("#tools__vk").classList.add("iftrue");
+          }
+        }
+      })
+      .catch((error) => {
+        // Ошибка
+        console.log(error);
+      });
   </script>
   <script src="script.js"></script>
 </body>
