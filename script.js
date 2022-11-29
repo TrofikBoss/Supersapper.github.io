@@ -128,6 +128,7 @@ function menuAction(act, butx) {
     .then((data) => { 
       if (data.result) {
         butx.classList.remove("active");
+        butx.classList.add("iftrue");
       }
     })
     .catch((error) => {
