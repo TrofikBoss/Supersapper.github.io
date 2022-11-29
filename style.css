@@ -160,8 +160,8 @@ body {
 }
 .area.win-theme {
   background-color: rgb(223, 255, 224);
-  border: 5px solid rgb(72, 225, 58);
-  color: green;
+  border: 5px solid rgb(128 244 118);
+  color: #4ec24e;
 }
 .area-mine.win-theme {
   background-color: rgb(113, 255, 118);
