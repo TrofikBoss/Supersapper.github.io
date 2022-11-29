@@ -124,15 +124,8 @@ function menuAction(act, butx) {
     setTimeout(() => {butx.classList.remove("active")}, 1000);
   }
   if (menuacts == "vk") {
+    vkBridge.send("VKWebAppLeaveGroup", {group_id: 217181628})
     vkBridge.send("VKWebAppJoinGroup", {group_id: 217181628})
-      .then((data) => { 
-    if (data.result) {
-      // Пользователь подписался на сообщество
-    }
-  })
-  .catch((error) => {
-     vkBridge.send("VKWebAppLeaveGroup", {group_id: 217181628})
-  });
   }
   if (menuacts == "info") {
     document.querySelector(".instruction").classList.remove("hidden");
