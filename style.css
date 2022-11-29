@@ -113,6 +113,11 @@ body {
   border: 5px solid rgb(225, 127, 58);
   transform: scale(0.9);
 }
+.tools button.iftrue {
+  background-color: rgb(255, 160, 113);
+  border: 5px solid rgb(225, 127, 58);
+  transform: scale(0.9);
+}
 #tools__flag {
   background-image: url(texture/flag.png);
   background-size: 100%;
