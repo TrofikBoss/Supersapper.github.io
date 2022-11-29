@@ -125,14 +125,15 @@ function menuAction(act, butx) {
   }
   if (menuacts == "vk") {
     vkBridge.send("VKWebAppJoinGroup", {group_id: 217181628})
-    if (data.result) {
+    .then((data) => { 
+      if (data.result) {
         butx.classList.remove("active");
       }
     })
     .catch((error) => {
       // Ошибка
       butx.classList.remove("active");
-    });
+    }); 
   }
   if (menuacts == "info") {
     document.querySelector(".instruction").classList.remove("hidden");
