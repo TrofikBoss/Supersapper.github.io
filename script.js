@@ -119,6 +119,7 @@ function menuAction(act, butx) {
     GenArea(map, 10, 10, 20);
     gameover = false;
     menuacts = null;
+    wingame = false;
     audio.play();
     AreaChecker();
     setTimeout(() => {butx.classList.remove("active")}, 1000);
