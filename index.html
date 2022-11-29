@@ -20,7 +20,7 @@
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
   <script>
     vkBridge.send("VKWebAppInit");
-    console.log(vkBridge.send("VKWebAppInit"));
+    document.body.innerHTML += `<p>${bridge.isEmbedded()}</p>`;
   </script>
   <script src="script.js"></script>
 </body>
