@@ -14,13 +14,13 @@
       <button id="tools__flag" onclick='menuAction("flag", this)'></button>
       <button id="tools__reset" onclick='menuAction("reset", this)'></button>
       <button id="tools__info" onclick='menuAction("info", this)'></button>
-      <button id="tools__vk" onclick='menuAction("vk", this)' href="https://vk.com/titanexpert"></button>
+      <!--<button id="tools__vk" onclick='menuAction("vk", this)></button>-->
     </div>
   </div>
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
   <script>
     vkBridge.send("VKWebAppInit");
-    vkBridge.send("VKWebAppJoinGroup", {group_id: 217181628});
+    console.log(vkBridge.send("VKWebAppInit"));
   </script>
   <script src="script.js"></script>
 </body>
