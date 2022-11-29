@@ -136,6 +136,12 @@ body {
   image-rendering: pixelated;
   margin-left: 50px;
 }
+#tools__add {
+  background-image: url(texture/add.png);
+  background-size: 100%;
+  image-rendering: pixelated;
+  margin-left: 50px;
+}
 .area.flag {
   background-image: url(texture/flag.png);
   background-size: 100%;
