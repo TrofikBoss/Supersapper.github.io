@@ -168,7 +168,7 @@ body {
   border: 5px solid rgb(72, 225, 58);
   color: green;
 }
-.area-first {
+.area-first.area-close {
     background-color: rgb(255, 236, 201);
     border: 5px solid rgb(255, 198, 155);
     z-index: 50;
