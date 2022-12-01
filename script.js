@@ -74,8 +74,7 @@ function DrawArea(map) {
         }
         area.classList.add("area-close");
         if ((minecount == 0 && nullarea == false) && ((map.length / 2 - 3 < y) && (map.length / 2 + 3 > y))) {
-          area.classList.add("area-open");
-          area.classList.remove("area-close");
+          area.classList.add("area-first");
           nullarea = true;
         } 
       }
