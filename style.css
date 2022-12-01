@@ -168,6 +168,11 @@ body {
   border: 5px solid rgb(72, 225, 58);
   color: green;
 }
+.area-first {
+    background-color: rgb(255 113 113);
+    border: 5px solid rgb(226 53 53);
+    z-index: 50;
+}
 .instruction {
   width: 610px;
   height: 400px;
