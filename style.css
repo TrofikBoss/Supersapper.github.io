@@ -169,8 +169,8 @@ body {
   color: green;
 }
 .area-first {
-    background-color: rgb(255 113 113);
-    border: 5px solid rgb(226 53 53);
+    background-color: rgb(255, 236, 201);
+    border: 5px solid rgb(255, 198, 155);
     z-index: 50;
 }
 .instruction {
