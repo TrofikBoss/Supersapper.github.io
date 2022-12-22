@@ -153,6 +153,12 @@ body {
   image-rendering: pixelated;
   margin-left: 50px;
 }
+#tools__menu {
+  background-image: url(texture/menu.png);
+  background-size: 100%;
+  image-rendering: pixelated;
+  margin-left: 50px;
+}
 .area.flag {
   background-image: url(texture/flag.png);
   background-size: 100%;
@@ -183,10 +189,37 @@ body {
   margin-top: 100px;
   background-image: url(texture/instruction.png);
 }
-.hidden {
-  display: none;
-}
 #game {
   display: flex;
   position: relative;
+  width: 824px;
+  height: 720px;
+  transition: 0.2s;
+}
+.menu .button {
+  background-color: rgb(255, 160, 113);
+  border: 5px solid rgb(225, 127, 58);
+  min-height: 40px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.256));
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.menu {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 100;
+  flex-direction: column;
+}
+.hidden, .button.hidden {
+  display: none;
 }

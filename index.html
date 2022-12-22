@@ -9,6 +9,14 @@
 </head>
 <body>
   <div id="game">
+    <div class="menu">
+      <div class="button hidden" id="menu-game-play" onclick='PlayGo()'>Продолжить игру</div>
+      <div class="button" id="menu-game-new" onclick='PlayAct()'>Начать игру</div>
+      <div class="button hidden" id="game-easy" onclick="GenArea(10, 10, 10, 'easy'), PlayGo()">Лёгкая</div>
+      <div class="button hidden" id="game-normal" onclick="GenArea(12, 10, 20, 'normal'), PlayGo()">Средняя</div>
+      <div class="button hidden" id="game-hard" onclick="GenArea(15, 12, 33, 'hard'), PlayGo()">Тяжёлая</div>
+      <div class="button hidden" id="menu-back" onclick="MenuBack()">Назад</div>
+    </div>
     <div class="instruction hidden"></div>
     <div class="tools">
       <button id="tools__flag" onclick='menuAction("flag", this)'></button>
@@ -16,6 +24,7 @@
       <button id="tools__info" onclick='menuAction("info", this)'></button>
       <button id="tools__vk" onclick='menuAction("vk", this)'></button>
       <button id="tools__add" onclick='menuAction("add", this)'></button>
+      <button id="tools__menu" onclick='menuAction("menu", this)'></button>
     </div>
   </div>
   <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>

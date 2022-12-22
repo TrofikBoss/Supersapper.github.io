@@ -4,8 +4,13 @@ let instruction = document.querySelector(".instruction");
 let map = [];
 let minelocate = [];
 let gameover = false;
+let gameplay = false;
+let difficulty = "easy";
 
-function GenArea(map, maxx, maxy, propmine) {
+function GenArea(maxx, maxy, propmine, diff) {
+  gameover = false;
+  map = [];
+  difficulty = diff
   winner = false;
   minelocate = [];
   for (y in map) {
@@ -13,11 +18,7 @@ function GenArea(map, maxx, maxy, propmine) {
   }
   if (document.body.clientWidth < 550) {
     game.style.width = `${maxx * 61 + 5}px`;
-  } else {
-    game.style.width = `${maxx * 61 + 214}px`;
-  }
-  game.style.height = `${maxy * 61 + 110}px`;
-  tools.style.top = `${maxy * 61 + 10}px`;
+  } 
   let random;
   let gencount = 0
   for (let y = 0; y < maxy; y++) {
@@ -38,6 +39,15 @@ function GenArea(map, maxx, maxy, propmine) {
   DrawArea(map);
 }
 function DrawArea(map) {
+  let areascal = 1;
+  if (difficulty == "easy") {
+    var otstup = 100;
+  } else if (difficulty == "normal") {
+    var otstup = 50;
+  } else if (difficulty == "hard") {
+    var otstup = 0;
+    areascal = 0.89;
+  }
   document.querySelectorAll(".area").forEach(function(deletearea) {
     deletearea.outerHTML = "";
   })
@@ -49,12 +59,16 @@ function DrawArea(map) {
       area.classList.add(`coord-x-${x}`);
       area.classList.add(`coord-y-${y}`);
       if (document.body.clientWidth > 550) {
-        area.style.left = `${x * 61 + 100}px`;
+        area.style.left = `${x * 61 * areascal + otstup}px`;
+        area.style.transform = `scale(${areascal})`;
+        area.style.top = `${y * 61 * areascal}px`
+        tools.style.top = `${map.length * 61 * areascal + 10}px`;
       } else {
         area.style.left = `${x * 61}px`;
+        area.style.top = `${y * 61}px`
         game.style.transform = `scale(${document.body.clientWidth / game.style.width.replace("px", "")}) translateX(${(game.style.width.replace("px", "") - game.style.width.replace("px", "") * (game.style.width.replace("px", "") / document.body.clientWidth)) / 2}px) translateY(${(game.style.height.replace("px", "") - game.style.height.replace("px", "") * (game.style.width.replace("px", "") / document.body.clientWidth)) / 2}px)`;
+        tools.style.top = `${map.length * 61 + 10}px`;
       }
-      area.style.top = `${y * 61}px`
       if (map[y][x] == "m") {
         area.classList.add("area-mine");
         area.classList.add("area-close");
@@ -115,7 +129,15 @@ function menuAction(act, butx) {
   }
   if (menuacts == "reset") {
     butx.classList.add("active");
-    GenArea(map, 10, 10, 20);
+    if (difficulty == "easy") {
+      GenArea(10, 10, 10, "easy");
+    }
+    if (difficulty == "normal") {
+      GenArea(12, 10, 20, 'normal');
+    }
+    if (difficulty == "hard") {
+      GenArea(15, 12, 33, 'hard');
+    }
     gameover = false;
     menuacts = null;
     wingame = false;
@@ -143,6 +165,14 @@ function menuAction(act, butx) {
   }
   if (menuacts == "add") {
     vkBridge.send('VKWebAppShare', {link: 'https://vk.com/app51487141'})
+  }
+  if (menuacts == "menu") {
+    document.querySelector(".menu").classList.remove("hidden");
+    if (gameplay == true) {
+      document.querySelector("#menu-game-play").classList.remove("hidden");
+    } else {
+      document.querySelector("#menu-game-play").classList.add("hidden");
+    }
   }
 }
 function AreaChecker() { // запускает проверку на клики, когда перезапускаешь карту, клетки создаются заново и нужна новая проверка
@@ -173,6 +203,15 @@ function wingames() {
 let closecount = 0;
 let wingame = false;
 function tick() {
+  if (document.querySelector(".menu").classList.contains("hidden") == false) {
+    document.querySelectorAll(".area, .tools").forEach(function(allblur) {
+      allblur.style.filter = "opacity(0.6) blur(1.5px)";
+    })
+  } else {
+    document.querySelectorAll(".area, .tools").forEach(function(allblur) {
+      allblur.style.filter = "blur(0px)";
+    })
+  }
   document.documentElement.scrollTop = 0;
   document.addEventListener('click', function() {
     if(Math.round(audio.currentTime) == 0) {
@@ -191,8 +230,37 @@ function tick() {
   }
   closecount = 0;
 }
+function PlayAct() {
+  document.querySelectorAll("#game-easy, #game-normal, #game-hard, #menu-back").forEach(function(one123) {
+    one123.classList.remove("hidden");
+    document.querySelector("#menu-game-new").classList.add("hidden");
+    if (gameplay == "true") {
+      document.querySelector("#menu-game-play").classList.add("hidden");
+    }
+  })
+}
+function MenuBack() {
+  document.querySelectorAll("#game-easy, #game-normal, #game-hard, #menu-back").forEach(function(one123) {
+    one123.classList.add("hidden");
+    document.querySelector("#menu-game-new").classList.remove("hidden");
+    if (gameplay == "true") {
+      document.querySelector("#menu-game-play").classList.remove("hidden");
+    }
+  })
+}
+function PlayGo() {
+  document.querySelector(".menu").classList.add("hidden");
+  document.querySelectorAll("#game-easy, #game-normal, #game-hard, #menu-back").forEach(function(one123) {
+    one123.classList.add("hidden");
+    document.querySelector("#menu-game-new").classList.remove("hidden");
+    document.querySelector("#menu-game-play").classList.remove("hidden");
+  })
+  gameplay = true;
+  AreaChecker();
+}
+GenArea(10, 10, 10, "easy");
 
-GenArea(map, 10, 10, 20);
 setInterval(tick, 100);
-AreaChecker();
+
+
 
