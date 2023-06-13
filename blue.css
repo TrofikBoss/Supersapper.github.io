@@ -1,0 +1,78 @@
+.area {
+    background-color: rgb(244, 252, 255);
+    border: 5px solid rgb(216, 238, 255);
+}
+.area-open.area-mine {
+    background-color: rgb(89, 136, 255);
+    border: 5px solid rgb(62, 107, 212);
+}
+.area-open {
+    background-color: rgb(244, 250, 255);
+    border: 5px solid rgb(216, 234, 255);
+}
+.around-1 {
+    background-color: rgb(245, 251, 255);
+    border: 5px solid rgb(225, 246, 255);
+    color: rgb(181, 229, 255);
+}
+.around-2 {
+    background-color: rgb(229, 245, 255);
+    border: 5px solid rgb(207, 231, 253);
+    color: rgb(157, 219, 255);
+  }
+  .around-3 {
+    background-color: rgb(208, 239, 255);
+    border: 5px solid rgb(189, 231, 255);
+    color: rgb(124, 224, 255);
+  }
+.around-4 {
+    background-color: rgb(196, 232, 255);
+    border: 5px solid rgb(172, 223, 255);
+    color: rgb(80, 154, 219);
+}
+.around-5 {
+    background-color: rgb(186, 229, 255);
+    border: 5px solid rgb(160, 226, 255);
+    color: rgb(59, 150, 189);
+}
+.around-6 {
+  background-color: rgb(172, 232, 255);
+  border: 5px solid rgb(145, 213, 255);
+  color: rgb(44, 125, 176);
+}
+.around-7 {
+  background-color: rgb(157, 226, 255);
+  border: 5px solid rgb(131, 207, 255);
+  color: rgb(31, 126, 152);
+}
+.around-8 {
+  background-color: rgb(146, 210, 255);
+  border: 5px solid rgb(121, 197, 255);
+  color: rgb(31, 102, 152);
+}
+.area-close {
+  background-color: rgb(113, 198, 255);
+  border: 5px solid rgb(58, 164, 225);
+  color: rgba(0, 0, 0, 0);
+}
+.tools button {
+  background-color: rgb(244, 250, 255);
+  border: 5px solid rgb(129, 184, 210);
+}
+.tools button.active {
+  background-color: rgb(113, 196, 255);
+  border: 5px solid rgb(58, 161, 225);
+}
+.tools button.iftrue {
+  background-color: rgb(113, 212, 255);
+  border: 5px solid rgb(58, 161, 225);
+}
+.area-first.area-close {
+  background-color: rgb(201, 235, 255);
+  border: 5px solid rgb(155, 217, 255);
+}
+.menu .button {
+  background-color: rgb(106, 179, 238);
+  border: 5px solid rgb(54, 142, 209);
+}
+
