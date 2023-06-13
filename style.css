@@ -1,24 +1,16 @@
 .area {
   width: 55px;
   height: 55px;
-  background-color: rgb(255, 249, 244);
-  border: 5px solid rgb(255, 234, 216);
   position: absolute;
   z-index: 1;
   user-select: none;
 }
 .area-open.area-mine {
-  background-color: rgb(255, 89, 89);
-  border: 5px solid rgb(212, 62, 62);
   background-image: url(texture/mine.png);
   image-rendering: pixelated;
   background-repeat: no-repeat;
   background-size: 100%;
   z-index: 11;
-}
-.area-open {
-  background-color: rgb(255, 249, 244);
-  border: 5px solid rgb(255, 234, 216);
 }
 .around-1, .around-2, .around-3, .around-4, .around-5, .around-6, .around-7, .around-8 {
   font-size: 40px;
@@ -29,59 +21,28 @@
   font-weight: 600;
 }
 .around-1 {
-  background-color: rgb(255, 245, 245);
-  border: 5px solid rgb(255, 225, 225);
-  color: rgb(255, 181, 181);
   z-index: 2;
 }
 .around-2 {
-  background-color: rgb(255, 229, 229);
-  border: 5px solid rgb(253, 207, 207);
-  color: rgb(255, 157, 157);
   z-index: 3;
 }
 .around-3 {
-  background-color: rgb(255, 208, 208);
-  border: 5px solid rgb(255, 189, 189);
-  color: rgb(255, 124, 124);
   z-index: 4;
 }
 .around-4 {
-  background-color: rgb(255, 196, 196);
-  border: 5px solid rgb(255, 172, 172);
-  color: rgb(219, 80, 80);
   z-index: 5;
 }
 .around-5 {
-  background-color: rgb(255, 186, 186);
-  border: 5px solid rgb(255, 160, 160);
-  color: rgb(189, 59, 59);
   z-index: 6;
 }
 .around-6 {
-  background-color: rgb(255, 172, 172);
-  border: 5px solid rgb(255, 145, 145);
-  color: rgb(176, 44, 44);
   z-index: 7;
 }
 .around-7 {
-  background-color: rgb(255, 157, 157);
-  border: 5px solid rgb(255, 131, 131);
-  color: rgb(152, 31, 31);
   z-index: 8;
 }
 .around-8 {
-  background-color: rgb(255, 146, 146);
-  border: 5px solid rgb(255, 121, 121);
-  color: rgb(152, 31, 31);
   z-index: 9;
-}
-.area-close {
-  background-color: rgb(255, 160, 113);
-  border: 5px solid rgb(225, 127, 58);
-  background-image: url();
-  color: rgba(0, 0, 0, 0);
-  z-index: 10;
 }
 .tools {
   position: absolute;
@@ -104,18 +65,13 @@ body {
 .tools button {
   width: 60px;
   height: 60px;
-  background-color: rgb(255, 249, 244);
-  border: 5px solid rgb(210, 167, 129);
   transition: 0.2s;
+  box-sizing: border-box;
 }
 .tools button.active {
-  background-color: rgb(255, 160, 113);
-  border: 5px solid rgb(225, 127, 58);
   transform: scale(0.9);
 }
 .tools button.iftrue {
-  background-color: rgb(255, 160, 113);
-  border: 5px solid rgb(225, 127, 58);
   transform: scale(0.9);
 }
 #tools__flag {
@@ -175,9 +131,7 @@ body {
   color: green;
 }
 .area-first.area-close {
-    background-color: rgb(255, 236, 201);
-    border: 5px solid rgb(255, 198, 155);
-    z-index: 50;
+  z-index: 50;
 }
 .instruction {
   width: 610px;
@@ -197,8 +151,6 @@ body {
   transition: 0.2s;
 }
 .menu .button {
-  background-color: rgb(255, 160, 113);
-  border: 5px solid rgb(225, 127, 58);
   min-height: 40px;
   min-width: 300px;
   display: flex;
@@ -222,4 +174,38 @@ body {
 }
 .hidden, .button.hidden {
   display: none;
+}
+.area-close {
+  background-image: url();
+  color: rgba(0, 0, 0, 0);
+  z-index: 10;
+}
+.theme__menu {
+  display: flex;
+  width: 308px;
+  justify-content: space-around;
+}
+.theme__menu .button {
+  margin: 0px;
+  min-width: unset;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.theme__menu .button.orange {
+  background-color: rgb(255, 160, 113);
+  border: 5px solid rgb(225, 127, 58);
+}
+.theme__menu .button.blue {
+  background-color: rgb(106, 179, 238);
+  border: 5px solid rgb(54, 142, 209);
+}
+.theme__menu .button.gray {
+  background-color: rgb(118, 118, 118);
+  border: 5px solid rgb(89, 89, 89);
+}
+.theme__menu .button.green {
+  background-color: rgb(110, 238, 106);
+  border: 5px solid rgb(54, 209, 67);
 }

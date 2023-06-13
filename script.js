@@ -6,6 +6,12 @@ let minelocate = [];
 let gameover = false;
 let gameplay = false;
 let difficulty = "easy";
+let theme = "orange";
+
+function changeTheme(themeid) {
+  theme = themeid;
+  document.querySelector("link.theme").href = `theme/${theme}.css`;
+}
 
 function GenArea(maxx, maxy, propmine, diff) {
   gameover = false;
