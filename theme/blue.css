@@ -8,32 +8,32 @@
 }
 .area-open {
     background-color: rgb(244, 250, 255);
-    border: 5px solid rgb(216, 234, 255);
+    border: 5px solid rgb(214, 242, 255);
 }
 .around-1 {
-    background-color: rgb(245, 251, 255);
-    border: 5px solid rgb(225, 246, 255);
-    color: rgb(181, 229, 255);
+    background-color: rgb(233, 246, 255);
+    border: 5px solid rgb(197, 234, 255);
+    color: rgb(168, 225, 255);
 }
 .around-2 {
-    background-color: rgb(229, 245, 255);
-    border: 5px solid rgb(207, 231, 253);
-    color: rgb(157, 219, 255);
+    background-color: rgb(218, 241, 255);
+    border: 5px solid rgb(189, 236, 255);
+    color: rgb(140, 213, 255);
   }
   .around-3 {
-    background-color: rgb(208, 239, 255);
-    border: 5px solid rgb(189, 231, 255);
-    color: rgb(124, 224, 255);
+    background-color: rgb(199, 236, 255);
+    border: 5px solid rgb(180, 228, 255);
+    color: rgb(127, 208, 255);
   }
 .around-4 {
-    background-color: rgb(196, 232, 255);
-    border: 5px solid rgb(172, 223, 255);
-    color: rgb(80, 154, 219);
+  background-color: rgb(186, 229, 255);
+  border: 5px solid rgb(160, 219, 255);
+  color: rgb(80, 154, 219);
 }
 .around-5 {
-    background-color: rgb(186, 229, 255);
-    border: 5px solid rgb(160, 226, 255);
-    color: rgb(59, 150, 189);
+  background-color: rgb(173, 224, 255);
+  border: 5px solid rgb(143, 212, 255);
+  color: rgb(74, 154, 223);
 }
 .around-6 {
   background-color: rgb(172, 232, 255);

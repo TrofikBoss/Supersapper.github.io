@@ -51,8 +51,8 @@
   color: rgb(67, 67, 67);
 }
 .area-close {
-  background-color: rgb(109, 109, 109);
-  border: 5px solid rgb(90, 90, 90);
+  background-color: rgb(144, 144, 144);
+  border: 5px solid rgb(117, 117, 117);
   color: rgba(0, 0, 0, 0);
 }
 .tools button {
@@ -72,7 +72,7 @@
   border: 5px solid rgb(136, 136, 136);
 }
 .menu .button {
-  background-color: rgb(121, 121, 121);
-  border: 5px solid rgb(66, 66, 66);
+  background-color: rgb(255, 160, 113);
+  border: 5px solid rgb(225, 127, 58);
 }
 
