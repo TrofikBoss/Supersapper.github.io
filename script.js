@@ -255,7 +255,7 @@ function PlayGo() {
       banner_location: 'bottom'
     });
   }*/
-  firststart = false;
+  //firststart = false;
   document.querySelector(".menu").classList.add("hidden");
   document.querySelectorAll("#game-easy, #game-normal, #game-hard, #menu-back").forEach(function(one123) {
     one123.classList.add("hidden");
