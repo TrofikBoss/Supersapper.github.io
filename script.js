@@ -5,20 +5,14 @@ let map = [];
 let minelocate = [];
 let gameover = false;
 let gameplay = false;
+let firststart = true;
 let difficulty = "easy";
 let theme = "orange";
 
 function showADS() {
-  vkBridge.send('VKWebAppShowBannerAd', {
-    banner_location: 'bottom'
+  vkBridge.send('VKWebAppShowNativeAds', {
+    ad_format: 'interstitial'
   })
-  .then((data) => { 
-    if (data.result) {
-    }
-  })
-  .catch((error) => {
-    console.log(error);
-  });
 }
 
 function changeTheme(themeid) {
@@ -147,6 +141,9 @@ function menuAction(act, butx) {
     })
   }
   if (menuacts == "reset") {
+    if (gameover == true) {
+      showADS();
+    }
     butx.classList.add("active");
     if (difficulty == "easy") {
       GenArea(10, 10, 10, "easy");
@@ -268,6 +265,11 @@ function MenuBack() {
   })
 }
 function PlayGo() {
+  if (firststart == false) {
+    showADS();
+  } else {
+    firststart = false;
+  }
   document.querySelector(".menu").classList.add("hidden");
   document.querySelectorAll("#game-easy, #game-normal, #game-hard, #menu-back").forEach(function(one123) {
     one123.classList.add("hidden");
