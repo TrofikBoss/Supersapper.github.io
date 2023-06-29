@@ -51,7 +51,7 @@
         // Ошибка
         console.log(error);
       });
-      bridge.send('VKWebAppShowBannerAd', {
+      vkBridge.send('VKWebAppShowBannerAd', {
         banner_location: 'bottom'
       })
       .then((data) => { 
