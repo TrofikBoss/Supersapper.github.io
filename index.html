@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" class="theme" href="theme/orange.css">
   <link rel="stylesheet" href="style.css">
   <title>SuperSapper</title>
 </head>
@@ -17,12 +16,6 @@
       <div class="button hidden" id="game-normal" onclick="GenArea(12, 10, 20, 'normal'), PlayGo()">Средняя</div>
       <div class="button hidden" id="game-hard" onclick="GenArea(15, 12, 33, 'hard'), PlayGo()">Тяжёлая</div>
       <div class="button hidden" id="menu-back" onclick="MenuBack()">Назад</div>
-      <div class="theme__menu">
-        <div class="button theme__button orange" onclick="changeTheme('orange')"></div>
-        <div class="button theme__button blue" onclick="changeTheme('blue')"></div>
-        <div class="button theme__button gray" onclick="changeTheme('gray')"></div>
-        <div class="button theme__button green" onclick="changeTheme('green')"></div>
-      </div>
     </div>
     <div class="instruction hidden"></div>
     <div class="tools">
@@ -51,8 +44,10 @@
         // Ошибка
         console.log(error);
       });
+      /*bridge.send('VKWebAppShowBannerAd', {
+      banner_location: 'bottom'
+      });*/
   </script>
   <script src="script.js"></script>
-  
 </body>
 </html>
