@@ -5,13 +5,8 @@ let map = [];
 let minelocate = [];
 let gameover = false;
 let gameplay = false;
+let firststart = true;
 let difficulty = "easy";
-let theme = "orange";
-
-function changeTheme(themeid) {
-  theme = themeid;
-  document.querySelector("link.theme").href = `theme/${theme}.css`;
-}
 
 function GenArea(maxx, maxy, propmine, diff) {
   gameover = false;
@@ -255,6 +250,12 @@ function MenuBack() {
   })
 }
 function PlayGo() {
+  if (!firststart) {
+    bridge.send('VKWebAppShowBannerAd', {
+      banner_location: 'bottom'
+    });
+  }
+  firststart = false;
   document.querySelector(".menu").classList.add("hidden");
   document.querySelectorAll("#game-easy, #game-normal, #game-hard, #menu-back").forEach(function(one123) {
     one123.classList.add("hidden");
