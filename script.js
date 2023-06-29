@@ -201,8 +201,10 @@ function AreaChecker() { // запускает проверку на клики,
           GameOver();
         }
       }
-      if (menuacts == "flag" && gameover == false && areaop.classList.contains("area-close") == true) {
-        areaop.classList.toggle('flag');
+      if (menuacts == "flag" && gameover == false) {
+        if (areaop.classList.contains("area-close") == true) {
+          areaop.classList.toggle('flag');
+        }
       }
     })
   })
@@ -266,9 +268,9 @@ function MenuBack() {
 }
 function PlayGo() {
   if (firststart == false) {
-    showADS();
-  } else {
-    firststart = false;
+    if (gameover) {
+      showADS();
+    }
   }
   document.querySelector(".menu").classList.add("hidden");
   document.querySelectorAll("#game-easy, #game-normal, #game-hard, #menu-back").forEach(function(one123) {
@@ -277,7 +279,12 @@ function PlayGo() {
     document.querySelector("#menu-game-play").classList.remove("hidden");
   })
   gameplay = true;
-  AreaChecker();
+  if (firststart || gameover) {
+    AreaChecker();
+  }
+  if (firststart) {
+    firststart = false;
+  }
 }
 GenArea(10, 10, 10, "easy");
 
