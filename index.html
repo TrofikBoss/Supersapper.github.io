@@ -51,16 +51,6 @@
         // Ошибка
         console.log(error);
       });
-      vkBridge.send('VKWebAppShowBannerAd', {
-        banner_location: 'bottom'
-      })
-      .then((data) => { 
-        if (data.result) {
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
   </script>
   <script src="script.js"></script>
 </body>

@@ -8,6 +8,19 @@ let gameplay = false;
 let difficulty = "easy";
 let theme = "orange";
 
+function showADS() {
+  vkBridge.send('VKWebAppShowBannerAd', {
+    banner_location: 'bottom'
+  })
+  .then((data) => { 
+    if (data.result) {
+    }
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
+
 function changeTheme(themeid) {
   theme = themeid;
   document.querySelector("link.theme").href = `theme/${theme}.css`;
