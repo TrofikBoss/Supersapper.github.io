@@ -250,11 +250,11 @@ function MenuBack() {
   })
 }
 function PlayGo() {
-  if (!firststart) {
+  /*if (!firststart) {
     bridge.send('VKWebAppShowBannerAd', {
       banner_location: 'bottom'
     });
-  }
+  }*/
   firststart = false;
   document.querySelector(".menu").classList.add("hidden");
   document.querySelectorAll("#game-easy, #game-normal, #game-hard, #menu-back").forEach(function(one123) {
