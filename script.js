@@ -26,7 +26,7 @@ function GenArea(maxx, maxy, propmine, diff) {
   }
   gameover = false;
   map = [];
-  difficulty = diff
+  difficulty = diff;
   winner = false;
   minelocate = [];
   for (y in map) {
