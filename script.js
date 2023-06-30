@@ -21,6 +21,9 @@ function changeTheme(themeid) {
 }
 
 function GenArea(maxx, maxy, propmine, diff) {
+  if (gameover == false) {
+    AreaChecker();
+  }
   gameover = false;
   map = [];
   difficulty = diff
