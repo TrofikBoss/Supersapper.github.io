@@ -21,10 +21,6 @@ function changeTheme(themeid) {
 }
 
 function GenArea(maxx, maxy, propmine, diff) {
-  if (gameover == false) {
-    AreaChecker();
-  }
-  gameover = false;
   map = [];
   difficulty = diff;
   winner = false;
@@ -112,6 +108,10 @@ function DrawArea(map) {
       game.append(area);
     }
   }
+  if (gameover == false) {
+    AreaChecker();
+  }
+  gameover = false;
 }
 function GameOver() {
   gameover = true;
