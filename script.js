@@ -10,9 +10,9 @@ let difficulty = "easy";
 let theme = "orange";
 
 function showADS() {
-  vkBridge.send('VKWebAppShowNativeAds', {
+  /*vkBridge.send('VKWebAppShowNativeAds', {
     ad_format: 'interstitial'
-  })
+  })*/
 }
 
 function changeTheme(themeid) {
