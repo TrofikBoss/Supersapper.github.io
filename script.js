@@ -108,10 +108,8 @@ function DrawArea(map) {
       game.append(area);
     }
   }
-  if (gameover == false) {
-    AreaChecker();
-  }
   gameover = false;
+  AreaChecker();
 }
 function GameOver() {
   gameover = true;
@@ -161,7 +159,6 @@ function menuAction(act, butx) {
     menuacts = null;
     wingame = false;
     audio.play();
-    AreaChecker();
     setTimeout(() => {butx.classList.remove("active")}, 1000);
   }
   if (menuacts == "vk") {
@@ -194,9 +191,10 @@ function menuAction(act, butx) {
     }
   }
 }
+
 function AreaChecker() { // запускает проверку на клики, когда перезапускаешь карту, клетки создаются заново и нужна новая проверка
   document.querySelectorAll(".area").forEach(function(areaop) {
-    areaop.addEventListener('click', function(polecl) {
+    function AreaChecker2() {
       if (gameover == false && menuacts != "flag" && areaop.classList.contains("flag") == false) {
         areaop.classList.remove("area-close");
         areaop.classList.add('area-open');
@@ -209,7 +207,10 @@ function AreaChecker() { // запускает проверку на клики,
           areaop.classList.toggle('flag');
         }
       }
-    })
+    }
+
+    areaop.removeEventListener("click", AreaChecker2);
+    areaop.addEventListener('click', AreaChecker2);
   })
 }
 function wingames() {
@@ -282,9 +283,6 @@ function PlayGo() {
     document.querySelector("#menu-game-play").classList.remove("hidden");
   })
   gameplay = true;
-  if (firststart || gameover) {
-    AreaChecker();
-  }
   if (firststart) {
     firststart = false;
   }
